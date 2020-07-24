@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What the fork is a closure? ・ Dan’s JavaScript Glossary</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="flex">
+            <h1><a href="#">whatthefork.is</a>   .   <em>a closure</em></h1>
+            <button onclick="themea()" id="themea"><i class="fas fa-sun"></i></button>
+            <button onclick="themeb()" id="themeb"><i class="fas fa-moon"></i></button>
+        </div>
+    </nav>
+    <div class="main">
+        <p>Closures are confusing because they are an “invisible” concept.</p>
+        <p>When you use an object, a variable, or a function, you do this intentionally. You think: “I’m gonna need a variable here,” and add it to your code.</p>
+        <p>Closures are different. By the time most people approach closures, they have already used them unknowingly many times — and it is likely that this is true for yourself, too. So learning closures is less about understanding a <em>new</em> concept and more about recognizing something you have <em>already been doing</em> for a while.</p>
+        <h2><a href="#" id="hovera">tl;dr</a> <span id="hover">#</span></h2>
+        <p>You have a closure when <b>a function accesses variables defined outside of it.</b></p>
+        <p>For example, this code snippet contains a closure:</p>
+        <div class="maincode">
+            <div class="mainCode"><span class="yellow">let</span> users <span class="peach">= [ 'Alice' , 'Dan' , 'Jessica' ] ;</span></div>
+            <div class="mainCode"><span class="yellow">let</span> query <span class="peach">= 'A';</span></div>
+            <div class="mainCode"><span class="yellow">let</span> user <span class="peach">=</span> users<span class="peach">.</span>filter<span class="peach">(</span>user <span class="peach">=></span> user.startsWith<span class="peach">(</span>query<span class="peach">));</span></div>
+        </div>
+        <p style="margin-bottom: -9px;">Notice how user => user.startsWith(query) is itself a function. It uses the query</p>
+        <p>variable. But the query variable is defined outside of that function. That’s a closure.</p>
+        <hr>
+        <p style="margin-block-end: 21px;"><b>You can stop reading here, if you want.</b>You can stop reading here, if you want. The rest of this article approaches closures in a different way. Instead of explaining what a closure is, it will walk you through the process of <em>discovering</em> closures — like the first programmers did in the 1960s.</p>
+        <hr>
+        <h2 style="margin-block-start: 45px;"><a href="#" id="hovera">Step 1: Functions Can Access Outside Variables</a> <span id="hover">#</span></h2>
+        <p style="margin-bottom: -9px;">To understand closures, we need to be somewhat familiar with variables and</p>
+        <p>functions. In this example, we declare the food variable <em>inside</em> the eat function:</p>
+        <div class="maincode">
+            <div class="mainCode"><span class="yellow">function</span> eat<span class="peach">() {</span></div>
+            <div class="mainCode"><span class="yellow">let</span> food <span class="peach">= 'cheese';</span></div>
+            <div class="mainCode">console<span class="peach"> . </span>log<span class="peach"> ( </span>food <span class="peach"> + ' is good ' ) ;</span></div>
+            <div class="mainCode"><span class="peach">}</span></div>
+            <br>
+            <div class="mainCode">eat<span class="peach"> ( ) ;</span> <span class="comment">// Logs 'cheese is good'</span></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

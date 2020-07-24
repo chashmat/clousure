@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Roboto:wght@900&display=swap');
+*{
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+}
+*::selection{
+    background-color: #ffffff;
+    color: #000;
+}
+body{
+    background-color: #131415;
+}
+i{
+    font-size: 1.5em;
+    color: white;
+}
+button{
+    background-color: transparent;
+    border: 1px solid transparent;
+    height: 28px;
+    margin-top: 25px;
+    border-radius: 10px;
+    outline: none;
+}
+button:hover{
+    background-color: rgba(255,255,255,.1);
+    cursor: pointer;
+}
+em{
+    font-size: 1em;
+    color: #ffe77a;
+    font-family: initial;
+}
+h1{
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    margin-left: -27px;
+    margin-right: 68px;
+}
+.flex{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+.main{
+    width: 75%;
+    margin: auto;
+}
+a{
+    text-decoration: none;
+}
+nav{
+    position: sticky;
+    top: 0px;
+    background-color: #131415;
+}
+p{
+    font-size: 19px;
+    margin-block-end: 45px;
+}
+p em{
+    color: #fff;
+    font-family: sans-serif;
+}
+#hover{
+    color: rgba(128, 128, 128, 0);
+    margin-left: 4px;
+}
+#hovera:hover ~ #hover{
+    color: rgba(128, 128, 128, 1);
+}
+.maincode{
+    width: 95%;
+    white-space: nowrap;
+    overflow: auto;
+    background-color: #1a1a1a;
+    padding: 20px 15px;
+    border-radius: 5px;
+}
+.yellow{
+    color: #ffe741;
+    font-family: monospace;
+    font-weight: bold;
+}
+.maincode div{
+    font-family: monospace;
+    font-size: 13.5px;
+}
+.mainCode{
+    margin-block-end: 10px;
+}
+.peach{
+    color: #fff3ad;
+}
+hr{
+    border: none;
+    border-bottom: 1px solid #444;
+}
+h2{
+    margin-block-end: 45px;
+}
+.comment{
+    color: #ccc;
+}
+#themeb{
+    display: none;
+}
+.fa-moon{
+    color: #131415;
+}
